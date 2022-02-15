@@ -1,1 +1,19 @@
 <h1>Josh's Store</h1>
+
+<hr/>
+
+<ul>
+  <% @products.each do |product| %>
+      <li>
+        <strong><%=product.title%></strong> 
+        costs $<%=product.price%> dollars
+        <br><%=product.description%>
+        <br>
+        <%=image_tag(product.image, width: 400)%>
+        <br><br><br>
+      </li>
+  <% end %>
+</ul>
+
+<%= @products.count %> products and couting! Check back soon!
+<hr/>
