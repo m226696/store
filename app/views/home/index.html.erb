@@ -1,19 +1,43 @@
-<h1>Josh's Store</h1>
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <h1>Josh's Store</h1>
+    </div>
+    </div>
+</div>
 
 <hr/>
 
-<ul>
-  <% @products.each do |product| %>
-      <li>
-        <strong><%=product.title%></strong> 
-        costs $<%=product.price%> dollars
-        <br><%=product.description%>
-        <br>
-        <%=image_tag(product.image, width: 400)%>
-        <br><br><br>
-      </li>
-  <% end %>
-</ul>
+<div class="container">
+    <div class="row">
+        <% @products.each do |product| %>
+        <div class="col">
+            <strong><%=product.title%></strong> 
+            costs $<%=product.price%> dollars
+            <br><%=product.description%>
+            <br>
+            <%=image_tag(product.image, width: 400)%>
+            <br><br><br>
+        </div>
+        <% end %>
+    </div>
+</div>
 
+<hr/>
+<div class="container">
+<div class="alert alert-success" role="alert">
+<div class="text-center">
 <%= @products.count %> products and couting! Check back soon!
+</div>
+</div>
+</div>
 <hr/>
+
+<!--
+<div class="card" style="width: 18rem;">
+  <img src=https://image.api.playstation.com/vulcan/img/rnd/202011/0714/Cu9fyu6DM41JPekXLf1neF9r.png class="card-img-top" alt="image not found">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+-->
