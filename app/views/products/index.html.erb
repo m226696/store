@@ -1,0 +1,12 @@
+
+<h2>There are <%= @cart.length %> items in your cart</h2>
+
+<ul>
+  <% @products.each do |product| %>
+    <li> <%=product.name%>: $<%=product.price%> 
+    <%= link_to "Buy Now", buy_path(product), class: "btn btn-primary" %>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/checkout">Checkout</a>

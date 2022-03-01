@@ -1,4 +1,6 @@
-class HomeController < ApplicationController
+class ProductsController < ApplicationController
+
+
     def index
         if session[:cart].nil?
             session[:cart] = []
@@ -18,7 +20,7 @@ class HomeController < ApplicationController
 
     def checkout
         @cart = session[:cart]
-        # empty the shopping cart
         session[:cart] = []
     end
+
 end

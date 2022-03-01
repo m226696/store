@@ -1,0 +1,12 @@
+<h2>Your cart:</h2>
+
+<ul>
+  <% @cart.each do |product| %>
+    <li> <%=product["name"]%> </li>
+  <% end %>
+</ul>
+
+<div class="alert alert-primary">
+Your items are on the way!<div>
+
+<a href="/">Keep Shopping</a>
