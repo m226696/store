@@ -16,7 +16,7 @@
             costs $<%=product.price%> dollars
             <br><%=product.description%>
             <br>
-            <%= link_to "Buy Now", buy_path(product), class: "btn btn-primary"%>
+            <%= link_to "Add to cart", buy_path(product), class: "btn btn-primary"%>
             <br>
             <%=image_tag(product.image, width: 400)%>
 
