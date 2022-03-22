@@ -17,7 +17,9 @@
             <br><%=product.description%>
             <br>
             <%= link_to "Buy Now", buy_path(product), class: "btn btn-primary"%>
-            
+            <br>
+            <%=image_tag(product.image, width: 400)%>
+
             <br><br><br>
         </div>
         <% end %>
@@ -34,8 +36,15 @@
 </div>
 <hr/>
 
+<div class="container">
+<%= link_to "Current Listings", products_path, class: "btn btn-outline-success btn-lg" %>
+<button type="button" class="btn btn-outline-info btn-lg"><%= link_to "New Product Listing", new_product_path %></button>
+</div>
+
+<div class="container">
 <h2> Your shopping cart has <%=@cart.length%> items</h2>
-<%= link_to "Check Out", checkout_path%>
+<%= link_to "Check Out", checkout_path, class: "btn btn-primary"%>
+</div>
 
 <!--
 <div class="card" style="width: 18rem;">
@@ -44,4 +53,6 @@
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
 </div>
+
+
 -->

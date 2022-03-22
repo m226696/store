@@ -1,8 +1,12 @@
+<div class="container">
+
+<h2> Your shopping cart has <%=@cart.length%> items</h2>
+
 <h2>Your cart:</h2>
 
 <ul>
   <% @cart.each do |product| %>
-    <li> <%=product["name"]%> </li>
+    <li> <%=product["title"]%> </li>
   <% end %>
 </ul>
 
@@ -10,3 +14,5 @@
 Your items are on the way!<div>
 
 <a href="/">Keep Shopping</a>
+
+</div>
