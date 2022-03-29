@@ -7,12 +7,10 @@ class ProductsController < ApplicationController
         end
         @products = Product.all
         @cart = session[:cart]
-    end
-
-    def list
-        # return products as json lists
-        @products = Product.all
-        render json: @products
+        respond_to do | format | 
+            format.html{render :index}
+            format.json{render json: @products, only: [:id, :title, :price, :stock]}
+        end
     end
 
     def show
