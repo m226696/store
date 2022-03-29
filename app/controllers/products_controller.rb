@@ -9,6 +9,12 @@ class ProductsController < ApplicationController
         @cart = session[:cart]
     end
 
+    def list
+        # return products as json lists
+        @products = Product.all
+        render json: @products
+    end
+
     def show
         @product = Product.find(params[:id])
     end
